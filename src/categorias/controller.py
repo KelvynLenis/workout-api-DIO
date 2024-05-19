@@ -29,7 +29,7 @@ async def query(db_session: DataBaseDependency) -> list[CategoriaOut]:
 @router.get(
   '/{id}', 
   summary='Consultar uma categoria', 
-  status_code=status.HTTP_200_CREATED, 
+  status_code=status.HTTP_200_OK, 
   response_model=CategoriaOut
 )
 async def query(id: UUID4, db_session: DataBaseDependency) -> CategoriaOut:
